@@ -25,7 +25,7 @@ public class Main2 {
 
         desafio1.pessoa();
         System.out.println(desafio1.calculadora(10));
-        desafio1.musica();
+        desafio1.musicas();
     }
     
 }
