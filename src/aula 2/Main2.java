@@ -1,21 +1,20 @@
+import br.com.alura.vitor.modelo.Filme;
+
 public class Main2 {
     public static void main(String[] args) {
         System.out.println("");
         Filme filmeBuscado = new Filme();
 
-        filmeBuscado.nomeFilme = "vingadores ultimato";
-        filmeBuscado.anoLancamento = 2019;
-        filmeBuscado.avalicacao = 9.9;
-        filmeBuscado .incluidoNoPlano = true;
-        filmeBuscado.quantidadeAvaliacao = 1;
+        filmeBuscado.setNomeFilme("vingadores ultimato");
+        filmeBuscado.setAnoLancamento(2019);
         
         filmeBuscado.exibeFichaTecnica();
         filmeBuscado.avalie(10);
-        filmeBuscado.avalie(7.5);
-        filmeBuscado.avalie(5);
+        filmeBuscado.avalie(9);
+        filmeBuscado.avalie(8);
 
-        System.out.println(filmeBuscado.avalicacao);
-        System.out.println(filmeBuscado.quantidadeAvaliacao);
+        System.out.println(filmeBuscado.getSomAvaliacao());
+        System.out.println("total avaliacoes: " + filmeBuscado.getQuantidadeAvaliacao());
         System.out.println(filmeBuscado.mediaAvaliacao());
 
         // desafio 1
