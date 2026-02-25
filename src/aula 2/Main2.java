@@ -68,19 +68,22 @@ public class Main2 {
         // desafio 3
 
         Carro carro = new Carro();
-        carro.setModelo("onyx 2016");
+        carro.setModelo("onyx");
         carro.setPreco1(10.0);
         carro.setPreco2(40.0);
         carro.setPreco3(20.0);
         carro.maiorPreco();
 
         ModeloCarro personalizacao = new ModeloCarro();
-        personalizacao.getPreco1();
-        personalizacao.getPreco2();
-        personalizacao.getPreco3();
+        personalizacao.setPreco1(10.0);
+        personalizacao.setPreco2(40.0);
+        personalizacao.setPreco3(20.0);
+
         personalizacao.setTunado(true);
+        personalizacao.setAno(2016);
         personalizacao.aumentoPreco();
         carro.maiorPreco();
+        System.out.println(carro.getModelo() + " - " + personalizacao.getAno() + " - " + personalizacao.getPreco3());
     }
     
 }
