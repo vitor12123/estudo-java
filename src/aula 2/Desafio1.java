@@ -1,6 +1,6 @@
 public class Desafio1 {
     void pessoa() {
-        System.out.println("Ola mundo!");
+        System.out.println("Ola vitor!");
     }
 
     double calculadora(double num){
