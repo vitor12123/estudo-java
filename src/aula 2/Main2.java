@@ -1,6 +1,8 @@
 import br.com.alura.vitor.calculos.CalculadoraDeTempo;
 import br.com.alura.vitor.modelo.Filme;
 import br.com.alura.vitor.modelo.Serie;
+import desafio3.Carro;
+import desafio3.ModeloCarro;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -63,6 +65,22 @@ public class Main2 {
         produto.setDesconto(2);
         produto.getPreco();
 
+        // desafio 3
+
+        Carro carro = new Carro();
+        carro.setModelo("onyx 2016");
+        carro.setPreco1(10.0);
+        carro.setPreco2(40.0);
+        carro.setPreco3(20.0);
+        carro.maiorPreco();
+
+        ModeloCarro personalizacao = new ModeloCarro();
+        personalizacao.getPreco1();
+        personalizacao.getPreco2();
+        personalizacao.getPreco3();
+        personalizacao.setTunado(true);
+        personalizacao.aumentoPreco();
+        carro.maiorPreco();
     }
     
 }
