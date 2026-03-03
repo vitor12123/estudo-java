@@ -1,6 +1,7 @@
 package br.com.alura.vitor.modelo;
+import br.com.alura.vitor.calculos.Classificavel;
 
-public class Filme extends Titulo {
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public void setDiretor(String diretor) {
@@ -8,5 +9,10 @@ public class Filme extends Titulo {
     }
     public String getDiretor() {
         return diretor;
+    }
+
+    @Override
+    public int getClassificave() {
+        return (int) mediaAvaliacao() / 2;
     }
 }

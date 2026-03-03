@@ -1,8 +1,9 @@
 package desafio3;
 
 public class GeradorNumeroPrimo extends NumerosPrimos{
-    private static int numeroPrimo;
-    public static int main(String[] args) {
+    static int numeroPrimo;
+
+    public static void main(String[] args) {
         for (int numero = 2; numero <= 100; numero++) {
 
             boolean ehPrimo = true;
@@ -18,6 +19,9 @@ public class GeradorNumeroPrimo extends NumerosPrimos{
             }
             numeroPrimo = numero;
         }
+    }
+
+    public static int getNumeroPrimo() {
         return numeroPrimo;
     }
 }

@@ -1,4 +1,6 @@
 import br.com.alura.vitor.calculos.CalculadoraDeTempo;
+import br.com.alura.vitor.calculos.FiltroRecomendacao;
+import br.com.alura.vitor.modelo.Episodio;
 import br.com.alura.vitor.modelo.Filme;
 import br.com.alura.vitor.modelo.Serie;
 import desafio3.Carro;
@@ -84,6 +86,19 @@ public class Main2 {
         personalizacao.aumentoPreco();
         carro.maiorPreco();
         System.out.println(carro.getModelo() + " - " + personalizacao.getAno() + " - " + personalizacao.getPreco3());
+
+        FiltroRecomendacao filtroR = new FiltroRecomendacao();
+
+        filtroR.filtra(filmeBuscado);
+
+        Episodio episodio = new Episodio();
+
+        episodio.setNumero(1);
+        episodio.setSerie(dark);
+        episodio.setTotalView(1000);
+
+        filtroR.filtra(episodio);
+
     }
     
 }
