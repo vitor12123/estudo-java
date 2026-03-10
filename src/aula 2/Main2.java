@@ -5,6 +5,10 @@ import br.com.alura.vitor.modelo.Filme;
 import br.com.alura.vitor.modelo.Serie;
 import desafio3.Carro;
 import desafio3.ModeloCarro;
+import desafio4.ConversorMoeda;
+import desafio4.Livro;
+import desafio4.ProdutoFisico;
+import desafio4.TabuadaMultiplicacao;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -14,7 +18,7 @@ public class Main2 {
         filmeBuscado.setNome("vingadores ultimato");
         filmeBuscado.setAnoLancamento(2019);
         filmeBuscado.setDuracaoEmMinutos(210);
-        
+
         filmeBuscado.exibeFichaTecnica();
         filmeBuscado.avalie(10);
         filmeBuscado.avalie(9);
@@ -44,6 +48,19 @@ public class Main2 {
         calculadora.inclui(outroFilme);
         calculadora.inclui(dark);
         System.out.println("Soma filmes " + calculadora.getTempoTotal() + " minutos");
+
+        FiltroRecomendacao filtroR = new FiltroRecomendacao();
+
+        filtroR.filtra(filmeBuscado);
+
+        Episodio episodio = new Episodio();
+
+        episodio.setNumero(1);
+        episodio.setSerie(dark);
+        episodio.setTotalView(1000);
+
+        filtroR.filtra(episodio);
+
 
         // desafio 1
         Desafio1 desafio1 = new Desafio1();
@@ -87,18 +104,20 @@ public class Main2 {
         carro.maiorPreco();
         System.out.println(carro.getModelo() + " - " + personalizacao.getAno() + " - " + personalizacao.getPreco3());
 
-        FiltroRecomendacao filtroR = new FiltroRecomendacao();
+        // desafio 4
 
-        filtroR.filtra(filmeBuscado);
+        ConversorMoeda conversorDolar = new ConversorMoeda();
+        conversorDolar.setDolar(1);
+        System.out.println(conversorDolar.converterDolarParaReal());
 
-        Episodio episodio = new Episodio();
+        TabuadaMultiplicacao tabuada = new TabuadaMultiplicacao();
+        tabuada.mostrarTabuada(10);
 
-        episodio.setNumero(1);
-        episodio.setSerie(dark);
-        episodio.setTotalView(1000);
+        ProdutoFisico loja = new ProdutoFisico();
+        Livro fabrica = new Livro();
 
-        filtroR.filtra(episodio);
-
+        System.out.println("preco para pessoas: " + loja.precoFinal());
+        System.out.println("preco para as lojas:    " + fabrica.precoParaLojas());
     }
-    
+
 }
