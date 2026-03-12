@@ -19,9 +19,19 @@ public class Titulo {
     public void setNome(String nomeFilme) {
         this.nomeFilme = nomeFilme;
     }
+
+    public String getNomeFilme() {
+        return nomeFilme;
+    }
+
     public void setAnoLancamento(int anoL){
         anoLancamento = anoL;
     }
+
+    public int getAnoLancamento() {
+        return anoLancamento;
+    }
+
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
     }

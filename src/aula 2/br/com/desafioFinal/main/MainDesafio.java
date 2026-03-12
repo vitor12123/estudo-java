@@ -3,6 +3,7 @@ package br.com.desafioFinal.main;
 import br.com.desafioFinal.classes.Audio;
 import br.com.desafioFinal.classes.MinhasPreferidas;
 import br.com.desafioFinal.classes.Musicas;
+import br.com.desafioFinal.classes.Podcast;
 
 import java.util.Random;
 
@@ -12,7 +13,7 @@ public class MainDesafio {
         Audio audio = new Audio();
         Random random = new Random();
 
-        musicas.setTitulo("Can't Deny");
+        musicas.setTitulo("can't deny");
         musicas.setTempoMusica(2.49);
         musicas.setGenero("house");
         musicas.setCantor("Ace Lizzy");
@@ -45,12 +46,27 @@ public class MainDesafio {
         System.out.println(musicas.getTotalReproducoes());
         System.out.println(musicas.getClassificacaoM());
 
-        String tituloCurtido = musicas.getTitulo();
-
         MinhasPreferidas curtidos = new MinhasPreferidas();
-        curtidos.setTitulo(tituloCurtido);
+        curtidos.setTitulo(musicas.getTitulo());
         curtidos.setEuCurti(true);
         curtidos.setMusicasCurtidas();
-        System.out.println("musicas curtidas: " + curtidos.getMusicasCurtidas(0));
+
+        musicas.setTitulo("relax my eyes");
+        curtidos.setTitulo(musicas.getTitulo());
+        curtidos.setEuCurti(true);
+        curtidos.setMusicasCurtidas();
+
+        System.out.println("musicas curtidas: " + curtidos.getMusicasCurtidas(0) + " , " + curtidos.getMusicasCurtidas(1));
+
+        Podcast podcast = new Podcast();
+
+        podcast.setNomePodcast("cortina de fumcaça");
+        curtidos.setEuCurti(true);
+        curtidos.setPodcastsCurtidos(podcast);
+        podcast.setNomePodcast("podcast imaginario 1");
+        curtidos.setEuCurti(true);
+        curtidos.setPodcastsCurtidos(podcast);
+
+        System.out.println("Podcasts curtidos: " + curtidos.getPodcastsCurtidos(0) + " , " + curtidos.getPodcastsCurtidos(1));
     }
 }
