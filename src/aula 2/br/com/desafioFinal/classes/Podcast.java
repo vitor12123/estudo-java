@@ -1,6 +1,7 @@
 package br.com.desafioFinal.classes;
 
 public class Podcast extends Audio {
+    private String nomePodcast;
     private String apresentador;
     private double tempoPodcast;
     private String descricao;
@@ -20,6 +21,15 @@ public class Podcast extends Audio {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public String getNomePodcast() {
+        return nomePodcast;
+    }
+
+    public void setNomePodcast(String nomePodcast) {
+        this.nomePodcast = nomePodcast;
+    }
+
 
     public double getTempoPodcast() {
         return tempoPodcast;
