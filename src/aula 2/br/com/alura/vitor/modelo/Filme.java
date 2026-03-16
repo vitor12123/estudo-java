@@ -4,6 +4,10 @@ import br.com.alura.vitor.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
+    public Filme(String nome, int anolancamento) {
+        super(nome, anolancamento);
+    }
+
     public void setDiretor(String diretor) {
         this.diretor = diretor;
     }

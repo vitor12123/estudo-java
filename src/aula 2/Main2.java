@@ -13,9 +13,9 @@ import desafio4.TabuadaMultiplicacao;
 public class Main2 {
     public static void main(String[] args) {
         System.out.println("");
-        Filme filmeBuscado = new Filme();
+        Filme filmeBuscado = new Filme("vingadores ultimato", 2019);
 
-        filmeBuscado.setNome("vingadores ultimato");
+        //filmeBuscado.setNome("vingadores ultimato");
         filmeBuscado.setAnoLancamento(2019);
         filmeBuscado.setDuracaoEmMinutos(210);
 
@@ -38,9 +38,9 @@ public class Main2 {
         dark.exibeFichaTecnica();
         System.out.println("Duração da serie em minutos: " + dark.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
+        Filme outroFilme = new Filme("ilha do medo",2010);
 
-        outroFilme.setNome("ilha do medo");
+        //outroFilme.setNome("ilha do medo");
         outroFilme.setDuracaoEmMinutos(132);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();

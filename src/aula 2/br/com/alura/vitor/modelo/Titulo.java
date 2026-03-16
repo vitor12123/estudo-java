@@ -8,6 +8,15 @@ public class Titulo {
     private int quantidadeAvaliacao ;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoLancamento) {
+        this.setNome(nome);
+        this.setAnoLancamento(anoLancamento);
+    }
+
+    public Titulo() {
+
+    }
+
     public int getQuantidadeAvaliacao() {
         return quantidadeAvaliacao;
     }

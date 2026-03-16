@@ -1,4 +1,5 @@
 import br.com.alura.vitor.modelo.Filme;
+import br.com.alura.vitor.modelo.Serie;
 import desafio1.Pessoa;
 
 import java.util.ArrayList;
@@ -6,10 +7,9 @@ import java.util.Scanner;
 
 public class Main3 {
     public static void main(String[] args) {
-        Filme filmeVitor = new Filme();
-        filmeVitor.setNome("ilha do medo");
-        filmeVitor.setDuracaoEmMinutos(210);
-        filmeVitor.setAnoLancamento(2010);
+        Filme filmeVitor = new Filme("todo mundo em panico", 2000);
+        filmeVitor.setDuracaoEmMinutos(132);
+        filmeVitor.setAnoLancamento(2000);
         filmeVitor.avalie(9.5);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -19,6 +19,8 @@ public class Main3 {
         System.out.println(listaDeFilmes.get(0).getNomeFilme());
         System.out.println(listaDeFilmes);
         System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
+        Serie theOffice = new Serie("The Office", 2008);
 
         // desafio 1
 
