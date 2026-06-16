@@ -1,6 +1,6 @@
 package br.com.alura.vitor.modelo;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nomeFilme ;
     private int anoLancamento ;
     private boolean incluidoNoPlano;
@@ -65,5 +65,10 @@ public class Titulo {
     }
     public int getDuracaoEmMinutos(){
         return duracaoEmMinutos;
+    }
+
+    @Override
+    public int compareTo(Titulo outroT) {
+        return this.getNomeFilme().compareTo(outroT.getNomeFilme());
     }
 }

@@ -17,7 +17,7 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public int getClassificave() {
-        return (int) mediaAvaliacao() / 2;
+        return (int) mediaAvaliacao();
     }
 
     @Override
